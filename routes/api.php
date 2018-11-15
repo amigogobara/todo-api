@@ -22,4 +22,4 @@ Route::get('todos' , 'ToDoController@index');
 
 Route::post('storeTodo' , 'ToDoController@store');
 
-Route::post('deleteTodo' , 'TodoController@destroy');
+Route::post('deleteTodo' , 'ToDoController@destroy');
