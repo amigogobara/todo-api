@@ -32,7 +32,7 @@ class ToDoController extends Controller
 
     public function destroy(Request $request)
     {
-        TodoList::find($request->id)->delete();
+        TodoList::findOrFail($request->id)->delete();
 
         return response()->json(['message' => 'deleted successfully']);
     }
