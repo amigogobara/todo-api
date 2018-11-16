@@ -14,3 +14,19 @@
 Route::get('/', function () {
     return view('welcome');
 });
+
+
+Route::get('/prime' , function(){
+    for ($i=1;$i<=100;$i++)
+    {
+        for($j=2;$j<$i;$j++){
+
+            if($i % $j != 0 && $i != $j){
+                $prime[] = $i;
+            }
+        }
+
+    }
+    return $prime;
+
+});

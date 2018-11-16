@@ -23,6 +23,7 @@ class ToDoController extends Controller
     public function store(Request $request)
     {
         $todo = new TodoList();
+        $todo->_id = $request->id;
         $todo->text = $request->text;
         $todo->save();
 
